@@ -7,4 +7,7 @@ import { Component } from "@angular/core";
     styleUrl: './header.component.css'
 })
 
-export class HeaderComponent {}
+export class HeaderComponent {
+    header = 'Accenture Employee Data';
+    desc = 'Enterprise level task management without friction';
+}
