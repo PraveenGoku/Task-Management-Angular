@@ -1,16 +1,18 @@
 import { Component, EventEmitter, Input, output, Output } from '@angular/core';
 
+import { type Users } from './user.model';
+
 // type Users = {
 //   id:string;
 //   avatar:string;
 //   name:string;
 // }
 
-interface Users {
-  id:string;
-  avatar:string;
-  name:string;
-}
+// interface Users {
+//   id:string;
+//   avatar:string;
+//   name:string;
+// }
 
 @Component({
   selector: 'app-user',
@@ -26,7 +28,7 @@ export class UserComponent {
   // @Input({ required: true }) name!: string;
 
   @Input({required:true}) user!: Users;
-
+  @Input({required:true}) selected!:boolean;
   @Output() select = new EventEmitter();
   // select = output<string>(); //Output Function method
   
